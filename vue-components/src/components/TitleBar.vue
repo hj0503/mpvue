@@ -2,6 +2,7 @@
   <div class="container">
     <span class="title">{{title}}</span>
     <span class="sub">{{subTitle}}</span>
+    <slot></slot>
   </div>
 </template>
 
