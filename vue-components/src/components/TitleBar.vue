@@ -5,16 +5,20 @@
       <TrendArrow :up="false"/>
     </span>
     <span class="sub">{{subTitle}}</span>
-    <slot></slot>
+    <SimplePanel title="title" sub="sub">
+      <h2>Hello world</h2>
+    </SimplePanel>
   </div>
 </template>
 
 <script>
 import TrendArrow from "../components/Arrow/TrendArrow";
+import SimplePanel from "../components/SimplePanel/index";
 export default {
   name: "TitleBar",
   components: {
-    TrendArrow
+    TrendArrow,
+    SimplePanel
   },
   props: {
     title: String,
@@ -27,15 +31,4 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  background: #ececec;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-.sub {
-  margin-left: 10px;
-}
 </style>

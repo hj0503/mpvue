@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <span>
     <GoUp v-if="up"/>
     <GoDown v-if="!up"/>
-  </div>
+  </span>
 </template>
 
 <script>
