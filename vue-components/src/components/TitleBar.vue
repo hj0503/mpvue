@@ -1,25 +1,31 @@
 <template>
   <div class="container">
-    <span class="title">{{title}}</span>
+    <span class="title">
+      {{title}}
+      <TrendArrow :up="false"/>
+    </span>
     <span class="sub">{{subTitle}}</span>
     <slot></slot>
   </div>
 </template>
 
 <script>
+import TrendArrow from "../components/Arrow/TrendArrow";
 export default {
-  name: 'HelloWorld',
+  name: "TitleBar",
+  components: {
+    TrendArrow
+  },
   props: {
     title: String,
     subTitle: {
       type: String,
       default: "sub-title"
-    },
+    }
   }
-}
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
   width: 100%;
@@ -29,7 +35,7 @@ export default {
   padding: 0 10px;
   box-sizing: border-box;
 }
-.sub{
+.sub {
   margin-left: 10px;
 }
 </style>
