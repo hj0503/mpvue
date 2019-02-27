@@ -6,7 +6,7 @@
     </span>
     <span class="sub">{{subTitle}}</span>
     <SimplePanel title="title" sub="sub">
-      <h2>Hello world</h2>
+      <h2 @click="addA">Hello world{{aDouble}}</h2>
     </SimplePanel>
   </div>
 </template>
@@ -26,7 +26,22 @@ export default {
       type: String,
       default: "sub-title"
     }
-  }
+  },
+  data() {
+    return {
+      a: 1
+    }
+  },
+  computed: {
+    aDouble() {
+      return this.a * 2
+    }
+  },
+  methods: {
+    addA() {
+      this.a++
+    }
+  },
 };
 </script>
 
