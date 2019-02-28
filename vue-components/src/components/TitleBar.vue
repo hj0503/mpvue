@@ -6,7 +6,7 @@
     </span>
     <span class="sub">{{subTitle}}</span>
     <SimplePanel title="title" sub="sub">
-      <h2 @click="addA">Hello world{{aDouble}}</h2>
+      <h2 @click="addA">Hello world{{aDouble}} {{this.$store.state.count}}</h2>
     </SimplePanel>
   </div>
 </template>
