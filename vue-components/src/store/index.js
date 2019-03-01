@@ -10,7 +10,7 @@ const state = {
   count: 0
 }
 
-export default new Vuex.Store({
+export default new Vuex.Store({ 
   state,
   getters,
   mutations,
