@@ -20,7 +20,7 @@ export default {
     TrendArrow,
     SimplePanel
   },
-  props: {
+  props: { 
     title: String,
     subTitle: {
       type: String,
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     addA() {
-      this.a++
+      this.$store.dispatch('increment')
     }
   },
 };
